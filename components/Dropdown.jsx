@@ -4,12 +4,11 @@ import DropDownPicker from 'react-native-dropdown-picker'
 import { Colors } from "../constants/colors";
 
 
-const Dropdown = () => {
+const Dropdown = ({value, setValue}) => {
     const colorScheme = useColorScheme()
     const theme = Colors[colorScheme] ?? Colors.light
 
     const [open, setOpen] = useState(false);
-    const [value , setValue] = useState(null)
     const [items, setItems] = useState([
             {label:'Birthday', value:'birthday'},
             {label:'Task', value:'task'},

@@ -1,17 +1,35 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
+import { clearEvents, loadEvents } from '../../data/storage'
+import { useFocusEffect } from '@react-navigation/native'
 
 import ThemedView from '../../components/ThemedView'
-import ThemedText from '../../components/ThemedText'
-import { items } from '../../data/events'
-
-const sections = Object.keys(items).map(date => ({
-  title: date,
-  data: items[date],
-}));
+import ThemedButton from '../../components/ThemedButton'
+import { Colors } from '../../constants/colors'
 
 const Events = () => {
+  const [events, setEvents] = useState({})
+
+  useFocusEffect(
+    useCallback(() => {
+      async function fetchEvents() {
+        const stored = await loadEvents();
+        setEvents(stored)
+      }
+      fetchEvents()
+    } , []))
     
+  const sections = Object.keys(events).map(date => ({
+    title: date,
+    data: events[date]
+  }))
+
+  const resetEvents = async () => {
+    clearEvents()
+    console.log('Empty Calendar')
+  }
+
+
   return (
     <ThemedView style={styles.container} safe={true}>
       <SectionList
@@ -27,6 +45,7 @@ const Events = () => {
           <Text style={styles.header}>{title}</Text>
         )}
       />
+      <ThemedButton onPress={resetEvents} style={{ backgroundColor: Colors.warning }}>Reset Calendar</ThemedButton>
     </ThemedView>
   );
 };

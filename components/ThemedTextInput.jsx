@@ -13,6 +13,7 @@ const ThemedTextInput = ({style, ...props}) => {
                 {
                     backgroundColor: theme.uiBackground,
                     color:theme.text,
+                    height:60,
                 },
                 style
             ]}

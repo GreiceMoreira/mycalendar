@@ -1,0 +1,19 @@
+{
+  "2025-09-29": [
+    { "name": "Meeting with client", "time": "10:00 AM", "type": "birthday" }
+  ],
+  "2025-09-30": [
+    { "name": "Team brainstorming session", "time": "9:00 AM", "type": "appointment" },
+    { "name": "Project presentation", "time": "2:00 PM", "type": "birthday" },
+    { "name": "Project presentation", "time": "5:00 PM", "type": "task" }
+  ],
+  "2025-10-01": [
+    { "name": "Team brainstorming session", "time": "9:00 AM" },
+    { "name": "Project presentation", "time": "2:00 PM", "type": "birthday" }
+  ],
+  "2025-10-02": [
+    { "name": "Team brainstorming session", "time": "9:00 AM", "type": "task" },
+    { "name": "Project presentation", "time": "2:00 PM", "type": "appointment" },
+    { "name": "TEST", "time": "5:00 PM", "type": "birthday" }
+  ]
+}
