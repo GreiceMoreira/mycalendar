@@ -7,7 +7,7 @@ import ThemedText from '../../components/ThemedText'
 const Profile = () => {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText style={styles.title}>My Profile</ThemedText>
+      <ThemedText style={styles.title}>My name is Greice</ThemedText>
     </ThemedView>
   )
 }

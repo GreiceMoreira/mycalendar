@@ -26,7 +26,7 @@ const Home = () => {
         
             <Spacer height={20}/>
 
-            <ThemedButton onPress={() => navigateToPage('/events')}>Go to Dashboard</ThemedButton>
+            <ThemedButton onPress={() => navigateToPage('/calendar')}>Start Here</ThemedButton>
         </ThemedView>
  
   )
